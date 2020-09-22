@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Rock Paper Scissor</title>
+    </head>
+    <body>
+        
+
+    <script>
+
+
+            let playerScore = 0;
+            let computerScore = 0;
+
+        function computerPlay()
+        {
+        const computerDisponible = [
+            "Rock",
+            "Paper",
+            "Scissor"
+        ];
+            
+        var computerChoice = computerDisponible[Math.floor(Math.random()*computerDisponible.length)];
+
+        return computerChoice;
+        }
+
+        
+
+      // const playerSelection = 'Rock';
+        
+     
+
+        function playRound(playerSelection, computerSelection)
+        {              
+            
+            if (playerSelection == 'Rock' && computerSelection == 'Rock')
+            {
+               results = 'It\'s a draw ! Rock vs Rock';
+               return results;
+            } 
+            else if (playerSelection == 'Rock' && computerSelection == 'Paper')
+            {
+               results = 'You lost ! Rock vs Paper';
+               computerScore++;
+               return results;
+            }
+            else if (playerSelection == 'Rock' && computerSelection == 'Scissor')
+            {
+               results = 'You won ! Rock vs Scissor';
+               playerScore++;
+               return results;
+            } 
+            else if (playerSelection == 'Paper' && computerSelection == 'Paper')
+            {
+               results = 'It\'s a draw ! Paper vs Paper ';
+               return results;
+            }
+            else if (playerSelection == 'Paper' && computerSelection == 'Scissor')
+            {
+               results = 'You lost ! Paper vs Scissor';
+               computerScore++;
+               return results;
+            }
+            else if (playerSelection == 'Paper' && computerSelection == 'Rock')
+            {
+               results = 'You won ! Paper vs Rock';
+               playerScore++;
+               return results;
+            }
+            else if (playerSelection == 'Scissor' && computerSelection == 'Scissor')
+            {
+               results = 'It\'s a draw ! Scissor vs Scissor';
+               return results;
+            }
+            else if (playerSelection == 'Scissor' && computerSelection == 'Rock')
+            {
+               results = 'You lost ! Scissor vs Rock';
+               computerScore++;
+               return results;
+            }
+            else if (playerSelection == 'Scissor' && computerSelection == 'Paper')
+            {
+               results = 'You won ! Scissor vs Paper';
+
+               playerScore++;
+
+               return results;
+            }
+            
+        }
+
+       
+
+        let finalScore = function finalScore()
+        {
+            if(playerScore > computerScore)
+            {
+                console.log('You won')
+            }else{
+                console.log('The computer Won')
+            }
+        }
+
+
+
+        function game()
+        {
+            
+            for(let i = 0; i < 5 ; i++)
+            {
+                
+                let playerSelection = prompt("Please enter 'Rock' , 'Paper' or 'Scissor' : ");
+
+                console.log(playRound(playerSelection,computerPlay()));
+                console.log('Your score is :',playerScore);
+                console.log('The computer score is ', computerScore);            
+            }
+                
+            if(i=5)
+               {
+            
+               if(playerScore>computerScore)
+                {
+                    console.log('You won the game, the computer lost')
+                }
+                else if (playerScore < computerScore)
+                {
+                    console.log('You lost the game, the computer won')
+                } else if (playerScore == computerScore)
+                    {
+                        console.log('It\'s a draw')
+                    }
+                }       
+                     
+        }
+
+        game();
+        
+       // It ends here
+
+    </script>
+
+    </body>
+</html>
