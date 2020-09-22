@@ -1,0 +1,15 @@
+
+/*
+Etch-A-Sketch panel
+*/
+#container {
+    width: 480px;;
+    margin: 20px auto;
+    border: 5px solid white;
+}
+body {
+    line-height: 0;
+    background: wheat;
+}
+
+

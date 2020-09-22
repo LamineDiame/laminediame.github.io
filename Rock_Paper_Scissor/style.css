@@ -1,0 +1,39 @@
+body{
+    
+ background-color:wheat;
+}
+
+button
+{
+    height: 58px;
+    width: 58px;;
+    margin-bottom: 5px;
+    border-radius: 100px;
+    background-color: #51624F;
+    box-shadow: 5px 5px 10px black;
+
+}
+
+#bigcontainer
+{
+    text-align: center;
+}
+#container
+{
+    background-color: black;
+    opacity: 0.3;
+    border-radius: 50px;
+    height: 100px; 
+    border: solid 3px teal ;
+    color: white;   
+    text-align: center;
+}
+
+#container.p
+{
+    margin-top: 50px;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}

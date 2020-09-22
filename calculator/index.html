@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <div id='container'>
+        <div id='calculatrice'>Made by : DIAME Lamine
+            
+            <div id ='display'><p id='displayinput'></p></p></div>
+            <div id='keyboard'>
+                <div class='numbers_div'>
+                    <button class='number' id=7>7</button>
+                    <button class='number' id=4>4</button>
+                    <button class='number' id=1>1</button>
+                    <button id='clear'>C</button>
+                </div>
+                <div class='numbers_div'>
+                    <button class='number'id=8>8</button>
+                    <button class='number'id=5>5</button>
+                    <button class='number'id=2>2</button>
+                    <button class='number'id=0>0</button>
+                </div>
+                <div class='numbers_div'>
+                    <button class='number'id=9>9</button>
+                    <button class='number'id=6>6</button>
+                    <button class='number'id=3>3</button>
+                    <button id='equal'>=</button>
+                </div>
+                <div id='operators_div' class='numbers_div'>
+                    <button class='operator' id='divide'data-action="divide">/</button>
+                    <button class='operator' id='multiply'data-action="multiply">*</button>
+                    <button class='operator' id='substract'data-action="subtract">-</button>
+                    <button class='operator' id='add'data-action="add">+</button>
+                </div>
+                
+            
+            </div>
+            
+                    
+            
+        </div>
+    </div>
+
+<script>
+    const displayinput = document.querySelector('#displayinput');
+
+const numberBtns = Array.from(document.querySelectorAll('.number'));
+numberBtns.forEach(button => button.addEventListener("click", addToDisplay)); 
+
+const operatorBtns = Array.from(document.querySelectorAll('.operator'));
+operatorBtns.forEach(button => button.addEventListener("click", addToDisplay));
+
+
+const clearBtn = document.querySelector('#clear');
+clearBtn.addEventListener("click", clearDisplay);
+
+const equalBtn = document.querySelector('#equal');
+equalBtn.addEventListener("click", equals);
+
+
+let operand1 = '';
+let operand2 = '';
+let operator = '';
+let total = '';
+let temp = '';
+let lastButtonPushed;
+
+    function add(a,b)
+    {
+        result = a+b;
+        return result;
+    }
+
+    function substract(a,b)
+    {
+        result = a-b;
+        return result;
+    }
+
+
+    function multiply(a,b)
+    {
+        result = a * b ;
+        return result;
+    }
+
+
+    function divide(a,b)
+    {   
+        result = a / b;
+        return result;
+    }
+
+    
+function addToDisplay(e){
+    let button = (e.target.innerText);
+    
+    if (operator == '' && button >=0 && button <= 9|| button == ".")
+    {
+        displayinput.textContent += button;
+    }
+    else if (lastButtonPushed === operator)
+    {
+        if (button >=0 && button <= 9|| button == "."){
+             displayinput.textContent = button; 
+        }else {
+            false;
+        }
+    }
+    else if(button >=0 && button <= 9|| button == ".")
+    {
+        displayinput.textContent += button;
+    }
+    else if (button == '+' || button == '-' || button == '/' || button == '*')
+    {
+        
+        if (operator == '')
+        {
+            operand1 = displayinput.textContent; console.log(operand1);
+            operator = button; console.log(operator);
+        }
+        else if (operator !== '')
+        {
+            operand2 = displayinput.textContent; console.log(operand2);
+            operate(operand1, operator, operand2); 
+            operand1 = displayinput.textContent; console.log(operand1);
+            operator = button; console.log(operator);
+            temp = '';
+            operand2 = temp;
+        }  
+    }
+    lastButtonPushed = button;
+}
+
+
+function operate(num1, op, num2) {
+    total = 0;
+    switch(op) {
+        case '+':
+            total += add(num1, num2);
+            displayinput.textContent = total;
+            break;
+        case '-':
+            total += substract(num1, num2);
+            displayinput.textContent = total;
+            break;
+        case '*':
+            total += multiply(num1, num2);
+            displayinput.textContent = total;
+            break;
+        case '/':
+            if(num2 == '0') {
+                displayinput.textContent =  `On ne peut pas diviser par 0.`;
+                numberBtns.forEach(button => button.removeEventListener("click", addToDisplay));
+                operatorBtns.forEach(button => button.removeEventListener("click", addToDisplay));
+                
+           }else {
+                total += divide(num1, num2);
+                displayinput.textContent = total;
+           }
+            
+            break;
+    }
+    console.log(total);
+}
+
+ 
+
+function equals(){
+    if (lastButtonPushed === operator){
+        false;
+    }else {
+        operand2 = displayinput.textContent; console.log(operand2);
+        operate(operand1, operator, operand2);
+        operand1 = displayinput.textContent; console.log(operand1);
+        operand2 = '';
+        operator = '';
+    }
+    
+}
+function clearDisplay(){
+    displayinput.textContent = " ";
+    total = '';
+    operand1 = '';
+    operand2 = '';
+    operator = '';
+    temp = '0';
+    numberBtns.forEach(button => button.addEventListener("click", addToDisplay));
+    operatorBtns.forEach(button => button.addEventListener("click", addToDisplay));
+}
+ 
+
+</script>
+
+</body>
+</html>
