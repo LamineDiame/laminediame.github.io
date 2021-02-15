@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="library.css">
+</head>
+<body>
+    <div id="form">
+        <form action="" method="GET" name = "form1">
+            <div id="formHeader">
+                <input type="button" id="closeButton" value="&times" onclick="hideForm()">
+            </div>
+            <div id="formBody">   
+                <div>
+                    <label for="titre">Entrez le titre du livre : </label> 
+                    <input type="text" name="title" id="title">
+                </div>
+                <div>
+                    <label for="auteur">Entrez le nom de l'auteur : </label>
+                    <input type="text" name="author" id="author">
+                </div>
+                <div>
+                    <label for="nbrpage">Entrez le nombre de pages : </label>
+                    <input type="text" name="nbrpages" id="nbrpages">
+                </div>
+                <div>
+                    <label for="status">L'avez-vous lu ? : </label>
+                    <select name="status" id="status">
+                        <option value="Non Lu">Non Lu</option>
+                        <option value="Lu">Lu</option>
+                    </select>
+                </div>
+            </div>      
+                <div id="formFooter">
+                    <input type="button" value="&#10003" onclick="addBookToLibrary(),document.getElementById('title').value= '',document.getElementById('author').value= '',
+                    document.getElementById('nbrpages').value= '',displayBooks(), hideForm()">
+                </div>
+               
+        </form>
+    </div>
+    
+
+    <div id="overlay" onclick="hideForm()"></div>
+    
+        <input type="button" value="+" id="buttonForm"onclick="displayForm()">
+    
+    <div id="container">    </div>
+    <div id="bookContainer">    </div>
+    <script src="library.js"></script>
+</body>
+</html>
+

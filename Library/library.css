@@ -1,0 +1,203 @@
+
+html
+{
+    height: 100%;
+    background: linear-gradient(130deg, rgba(231,177,112,1) 68%, rgba(238,201,156,1) 100%);
+}
+
+#form
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 750ms cubic-bezier(.27,.02,.66,1.65);
+    border : 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background: linear-gradient(130deg, rgba(226,159,78,1) 68%, rgba(238,201,156,1) 100%);
+    width: 300px;
+    height: 300px;
+    max-width: 80%;    
+    font-weight: bold;
+    box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
+}
+
+#form.active
+{
+    transform: translate(-50%, -50%) scale(1);
+    
+}
+
+#formHeader
+{
+ text-align: right;
+}
+#formBody
+{
+    padding: 10px;
+    text-align: center;
+}
+#formFooter
+{
+    text-align: center;
+}
+#formFooter input
+{
+    margin-top: 40px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+    font-weight: bold;
+    color: black;
+    transition: 1s ;
+    background-color: #316F37;
+    text-align: center;
+    box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
+}
+input
+{
+    border-radius: 5px;
+    box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
+}
+select
+{
+    border-radius: 5px;
+    box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
+
+}
+
+#formFooter input:hover
+{
+    box-shadow: 0px 0px 6px 5px  rgba(0,0,0,0.75);
+}
+#formBody div
+{
+    margin-top: 5px;
+}
+#form #closeButton
+{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+#overlay
+{
+    position: fixed;
+    opacity: 0;
+    transition: 250ms ease-in-out;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgb(0,0,0,.5);
+    pointer-events: none;
+}
+
+#overlay.active
+{
+    opacity: 1;
+    pointer-events: all;
+}
+#bookContainer
+{
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    transition: 250ms  ease-in-out;
+
+}
+
+.bookCard
+{
+    border-radius: 10px;
+    background: #316F37;
+    width: 250px;
+    max-width: 250px;
+    height: 275px;
+    font-weight: bold;
+    text-align: center ;
+    margin: 10px 15px;
+    box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
+}
+
+.innerCard
+{
+    padding-top: 20px;
+}
+.statusCard
+{
+    border : none;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    outline: none;
+    background: none;
+    font-size: 17px;
+    font-weight: bold;
+}
+.cardStatusLu
+{
+    background: linear-gradient(130deg, rgba(226,159,78,1) 68%, rgba(238,201,156,1) 100%);
+}
+.cardStatusNonLu
+{
+    background: linear-gradient(139deg, rgba(157,102,22,1) 42%, rgba(238,185,108,1) 100%, rgba(238,201,156,1) 100%);
+}
+.closeButton
+{
+    margin-top: 50px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-bottom: 50px;
+    border-radius: 50%;
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+    font-weight: bold;
+    color: black;
+    transition: 1s ;
+    background-color: #013A20;
+    text-align: center;
+    box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
+
+}
+
+.closeButton:hover
+{
+    box-shadow: 0px 0px 6px 5px  rgba(0,0,0,0.75);
+}
+
+#buttonForm
+{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-left: 50%;
+    margin-bottom: 50px;
+    border-radius: 50%;
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+    font-weight: bold;
+    color: black;
+    background: linear-gradient(139deg, rgba(157,102,22,1) 42%, rgba(238,185,108,1) 100%, rgba(238,201,156,1) 100%);
+    color: #013a20;
+    transition:  500ms ;
+    box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
+
+}
+
+#buttonForm:hover
+{
+    background: linear-gradient(149deg, rgba(1,58,32,1) 0%, rgba(69,184,68,1) 53%, rgba(208,245,203,1) 100%);
+    color : #9d6616;
+}

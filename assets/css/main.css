@@ -1517,7 +1517,9 @@ input, select, textarea {
 				margin: 0 auto;
 				width: auto;
 			}
-
+			.image.fit:hover {
+			
+					}
 /* List */
 
 	ul {
