@@ -2,7 +2,7 @@
 html
 {
     height: 100%;
-    background: linear-gradient(130deg, rgba(231,177,112,1) 68%, rgba(238,201,156,1) 100%);
+    background: #A05F5F;
 }
 
 #form
@@ -15,9 +15,9 @@ html
     border : 1px solid black;
     border-radius: 10px;
     z-index: 10;
-    background: linear-gradient(130deg, rgba(226,159,78,1) 68%, rgba(238,201,156,1) 100%);
-    width: 300px;
-    height: 300px;
+    background: linear-gradient(130deg, rgba(160,95,95,1) 0%, rgba(179,127,127,0.45524691358024694) 100%);
+    width: 500px;
+    height: 500px;
     max-width: 80%;    
     font-weight: bold;
     box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
@@ -25,23 +25,36 @@ html
 
 #form.active
 {
-    transform: translate(-50%, -50%) scale(1);
-    
+    transform: translate(-50%, -50%) scale(1);  
 }
 
 #formHeader
 {
  text-align: right;
 }
+
 #formBody
 {
-    padding: 10px;
-    text-align: center;
+    padding-top:15%;
+    font-size: 20px;
 }
+
+#formBody input
+{
+    font-size: 20px;
+}
+#formBody div
+{
+display:flex;
+justify-content: space-between ;
+max-width: 99%;
+}
+
 #formFooter
 {
     text-align: center;
 }
+
 #formFooter input
 {
     margin-top: 40px;
@@ -53,11 +66,16 @@ html
     height: 50px;
     width: 50px;
     font-weight: bold;
-    color: black;
-    transition: 1s ;
-    background-color: #316F37;
+    color: #A05F5F;
+    transition: 500ms ;
+    background: linear-gradient(130deg, rgba(160,95,95,1) 0%, rgba(62,83,118,1) 100%);
     text-align: center;
     box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
+}
+#formFooter input:hover
+{
+    color: #6783B0;
+    background: linear-gradient(130deg, rgba(62,83,118,1) 0%, rgba(160,95,95,1) 100%);
 }
 input
 {
@@ -68,7 +86,7 @@ select
 {
     border-radius: 5px;
     box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
-
+    width: 100px;
 }
 
 #formFooter input:hover
@@ -77,7 +95,7 @@ select
 }
 #formBody div
 {
-    margin-top: 5px;
+    margin-top: 35px;
 }
 #form #closeButton
 {
@@ -85,7 +103,9 @@ select
     border: none;
     outline: none;
     background: none;
-    font-size: 20px;
+    font-size: 30px;
+    height: 35px;
+    width: 35px;
     font-weight: bold;
 }
 #overlay
@@ -118,7 +138,7 @@ select
 .bookCard
 {
     border-radius: 10px;
-    background: #316F37;
+    background: #6783B0;
     width: 250px;
     max-width: 250px;
     height: 275px;
@@ -145,11 +165,11 @@ select
 }
 .cardStatusLu
 {
-    background: linear-gradient(130deg, rgba(226,159,78,1) 68%, rgba(238,201,156,1) 100%);
+    background: linear-gradient(130deg, rgba(62,83,118,1) 0%, rgba(79,107,152,0.5493827160493827) 100%);
 }
 .cardStatusNonLu
 {
-    background: linear-gradient(139deg, rgba(157,102,22,1) 42%, rgba(238,185,108,1) 100%, rgba(238,201,156,1) 100%);
+    background: linear-gradient(130deg, rgba(160,95,95,1) 0%, rgba(179,127,127,0.45524691358024694) 100%);
 }
 .closeButton
 {
@@ -164,16 +184,17 @@ select
     width: 50px;
     font-weight: bold;
     color: black;
-    transition: 1s ;
-    background-color: #013A20;
+    transition: 500ms ;
+    background: linear-gradient(130deg, rgba(160,95,95,1) 19%, rgba(62,83,118,1) 100%);
+    color: #6783B0 ;
     text-align: center;
     box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
-
 }
 
 .closeButton:hover
 {
     box-shadow: 0px 0px 6px 5px  rgba(0,0,0,0.75);
+    color: black;
 }
 
 #buttonForm
@@ -189,15 +210,15 @@ select
     width: 50px;
     font-weight: bold;
     color: black;
-    background: linear-gradient(139deg, rgba(157,102,22,1) 42%, rgba(238,185,108,1) 100%, rgba(238,201,156,1) 100%);
-    color: #013a20;
-    transition:  500ms ;
+    background: linear-gradient(130deg, rgba(160,95,95,1) 0%, rgba(62,83,118,1) 100%);
+    color: #A05F5F;
+    transition: 500ms ;
     box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
 
 }
 
 #buttonForm:hover
 {
-    background: linear-gradient(149deg, rgba(1,58,32,1) 0%, rgba(69,184,68,1) 53%, rgba(208,245,203,1) 100%);
-    color : #9d6616;
+    background: linear-gradient(130deg, rgba(62,83,118,1) 0%, rgba(160,95,95,1) 100%);
+    color : black;
 }
