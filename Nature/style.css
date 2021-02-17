@@ -49,3 +49,9 @@ kbd {
   letter-spacing: .1rem;
   color: #ffc600;
 }
+#home_button
+{
+    position: fixed;
+top:0;
+left: 0;
+}

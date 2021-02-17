@@ -15,7 +15,7 @@ html
     border : 1px solid black;
     border-radius: 10px;
     z-index: 10;
-    background: linear-gradient(130deg, rgba(160,95,95,1) 0%, rgba(179,127,127,0.45524691358024694) 100%);
+    background: #A05F5F;
     width: 500px;
     height: 500px;
     max-width: 80%;    
@@ -46,8 +46,9 @@ html
 #formBody div
 {
 display:flex;
-justify-content: space-between ;
+justify-content: center;
 max-width: 99%;
+
 }
 
 #formFooter
@@ -66,17 +67,13 @@ max-width: 99%;
     height: 50px;
     width: 50px;
     font-weight: bold;
-    color: #A05F5F;
+    color: black;
     transition: 500ms ;
-    background: linear-gradient(130deg, rgba(160,95,95,1) 0%, rgba(62,83,118,1) 100%);
+    background: #4E6A96;
     text-align: center;
     box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
 }
-#formFooter input:hover
-{
-    color: #6783B0;
-    background: linear-gradient(130deg, rgba(62,83,118,1) 0%, rgba(160,95,95,1) 100%);
-}
+
 input
 {
     border-radius: 5px;
@@ -185,8 +182,8 @@ select
     font-weight: bold;
     color: black;
     transition: 500ms ;
-    background: linear-gradient(130deg, rgba(160,95,95,1) 19%, rgba(62,83,118,1) 100%);
-    color: #6783B0 ;
+    background: #A05F5F;
+    color: black ;
     text-align: center;
     box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
 }
@@ -210,8 +207,8 @@ select
     width: 50px;
     font-weight: bold;
     color: black;
-    background: linear-gradient(130deg, rgba(160,95,95,1) 0%, rgba(62,83,118,1) 100%);
-    color: #A05F5F;
+    background: #8299BE;
+    color: black;
     transition: 500ms ;
     box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
 
@@ -219,6 +216,13 @@ select
 
 #buttonForm:hover
 {
-    background: linear-gradient(130deg, rgba(62,83,118,1) 0%, rgba(160,95,95,1) 100%);
+    background: #653C3C;
     color : black;
+}
+
+#home_button
+{
+    position: fixed;
+top:0;
+left: 0;
 }

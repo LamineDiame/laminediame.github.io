@@ -1,7 +1,7 @@
 let myLibrary = [
-    new Book ("Games Of Thrones ","George R. R. Martin","1000","Lu"),
-    new Book  ("Harry Potter","J. K. Rowling","750","Lu"),
-    new Book ("Percy Jackson","Rick Riordan","500","Non Lu")
+    new Book ("Games Of Thrones ","George R. R. Martin","1000","Terminé"),
+    new Book  ("Harry Potter","J. K. Rowling","750","Terminé"),
+    new Book ("Percy Jackson","Rick Riordan","500","Non Terminé")
 ];
 
 displayBooks();
@@ -34,7 +34,7 @@ function displayBooks()
 
         for(let i = 0; i < myLibrary.length; i++)
         {
-            if(myLibrary[i].status == 'Lu')
+            if(myLibrary[i].status == 'Terminé')
             {   
                 var row = '<div class="bookCard">'+
                 '<div class="innerCard">' +'TITRE : ' + myLibrary[i].title + '</div>'+
@@ -46,7 +46,7 @@ function displayBooks()
                 document.getElementById('bookContainer').insertAdjacentHTML("afterbegin", row) ;
                 ;
             }
-            else if(myLibrary[i].status == 'Non Lu')
+            else if(myLibrary[i].status == 'Non Terminé')
             {
                 var row = '<div class="bookCard">'+
                 '<div class="innerCard">' +'TITRE : ' + myLibrary[i].title + '</div>'+
@@ -70,15 +70,15 @@ function changeStatus(element)
 {
     let datastatus = document.getElementById('cardStatus'+element);
 
-    if(datastatus.textContent == 'Lu')
+    if(datastatus.textContent == 'Terminé')
     {
-        datastatus.textContent='Non Lu';
+        datastatus.textContent='Non Terminé';
          document.getElementById('cardStatus'+element).classList.add('cardStatusNonLu')
          document.getElementById('cardStatus'+element).classList.remove('cardStatusLu');       
     }
-    else if (datastatus.textContent == 'Non Lu')
+    else if (datastatus.textContent == 'Non Terminé')
     {
-        datastatus.textContent = 'Lu';
+        datastatus.textContent = 'Terminé';
          document.getElementById('cardStatus'+element).classList.add('cardStatusLu');
          document.getElementById('cardStatus'+element).classList.remove('cardStatusNonLu');  
     }

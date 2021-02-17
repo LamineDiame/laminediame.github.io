@@ -14,23 +14,20 @@
                 <input type="button" id="closeButton" value="&times" onclick="hideForm()">
             </div>
             <div id="formBody">   
-                <div>
-                    <label for="titre">Entrez le titre du livre : </label> 
-                    <input type="text" name="title" id="title">
+                <div>                    
+                    <input type="text" placeholder="Entrez le titre du livre :" name="title" id="title">
+                </div>
+                <div>                    
+                    <input type="text" placeholder="Entrez le nom de l'auteur :" name="author" id="author">
                 </div>
                 <div>
-                    <label for="auteur">Entrez le nom de l'auteur : </label>
-                    <input type="text" name="author" id="author">
+                    <input type="text" placeholder="Entrez le nombre de pages :" name="nbrpages" id="nbrpages">
                 </div>
                 <div>
-                    <label for="nbrpage">Entrez le nombre de pages : </label>
-                    <input type="text" name="nbrpages" id="nbrpages">
-                </div>
-                <div>
-                    <label for="status">L'avez-vous lu ? : </label>
+                    <label for="status">Où en êtes-vous ? : </label>
                     <select name="status" id="status">
-                        <option value="Non Lu">Non Lu</option>
-                        <option value="Lu">Lu</option>
+                        <option value="Non Terminé">Non Terminé</option>
+                        <option value="Terminé">Terminé</option>
                     </select>
                 </div>
             </div>      
@@ -42,6 +39,7 @@
         </form>
     </div>
     
+    <a href="../index.html"><img src="../images/home_button.png" alt="home" id="home_button"></a>
 
     <div id="overlay" onclick="hideForm()"></div>
     

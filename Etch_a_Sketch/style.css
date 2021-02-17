@@ -9,7 +9,24 @@ Etch-A-Sketch panel
 }
 body {
     line-height: 0;
-    background: wheat;
+    background: #f5deb3;
 }
 
+/* #home_button
+{
+    position: fixed;
+top:0;
+left: 0;
+} */
+#button
+{
+    cursor: pointer;
+    position:fixed;
+    right :250px;
+    font-size: 25px;
+    background-color: #EFCA86;
+    box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
+    border: none;
+    border: 15px;
 
+}

@@ -8,71 +8,51 @@
     <link rel="icon" type='image/jpeg'href="../images/icon_district.jpg">
 </head>
 <body>
+    <a href="../index.html"><img src="../images/home_button.png" alt="home" id="home_button"></a>
     <button  id= button>Effacer le tableau</button>
     <div  id='container'></div>
-
-    
-    
-
-
-
-
-
-
-
-
-
     <script>
- const container = document.getElementById("container");
+        const container = document.getElementById("container");
 
- function makeGrid(rows,cols)
-    {
-        for (let i = 0; i < rows; i++) 
-        {
-            for (let j=0;j<cols;j++)
-            {   
-                let square = document.createElement('div');
-                                square.className = 'square';
-                container.appendChild(square);
-                let width = (1/cols) * 480;
-            let height = width;
-            //add css styles
-            square.style.cssText = `width: ${width}px; height: ${height}px; display: inline-block; background:#DCDEE6;`;
-                square.addEventListener('mouseenter',() => console.log('Mouse enter row'));
-                square.addEventListener("mouseover", func, false);
+        function makeGrid(rows,cols)
+            {
+                for (let i = 0; i < rows; i++) 
+                {
+                    for (let j=0;j<cols;j++)
+                    {   
+                        let square = document.createElement('div');
+                                        square.className = 'square';
+                        container.appendChild(square);
+                        let width = (1/cols) * 480;
+                    let height = width;
+                    //add css styles
+                    square.style.cssText = `width: ${width}px; height: ${height}px; display: inline-block; background:#DCDEE6;`;
+                        square.addEventListener('mouseenter',() => console.log('Mouse enter row'));
+                        square.addEventListener("mouseover", func, false);
 
-                function func()
-                {   // not needed since item is already global, 
-                    // I am assuming this is here just because it's sample code?
-                    // var item = document.getElementById("button"); 
-                    square.style.background = 'black';
+                        function func()
+                        {   
+                            square.style.background = 'black';
+                        }
+                    }
                 }
-
-
             }
-          //  let br = document.createElement('br');
-          //   document.body.appendChild(br);
-        }
-    }
                     
 
             
                           
-function clear()
-                          {
-                            const btn = document.querySelector('button')
+        function clear()
+            {
+                const btn = document.querySelector('button')
+                btn.addEventListener('click', () =>
+            {   
+                window.location.reload();
+            });
+            }
+            clear();            
+            let newGrid = prompt('Veuillez saisir la taille de votre tableau ( 16 par exemple)');
+            makeGrid(newGrid,newGrid);
 
-                            btn.addEventListener('click', () =>
-                            {   
-                                
-                                window.location.reload();
-                                
-                            });
-                          }
-                          clear();            
-                          let newGrid = prompt('Veuillez saisir la taille de votre tableau ( 16 par exemple)');
-                            makeGrid(newGrid,newGrid);
-        
       
     </script>
 </body>
