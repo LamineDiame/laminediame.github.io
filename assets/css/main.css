@@ -1501,6 +1501,7 @@ input, select, textarea {
 		.image.fit {
 			display: block;
 			width: 100%;
+			transition: 1s;
 		}
 
 		.image.left {
@@ -1517,9 +1518,10 @@ input, select, textarea {
 				margin: 0 auto;
 				width: auto;
 			}
-			.image.fit:hover {
-			
-					}
+			a.image.fit:hover {
+				width :450px;
+				opacity: 0.8;	
+			}
 /* List */
 
 	ul {
