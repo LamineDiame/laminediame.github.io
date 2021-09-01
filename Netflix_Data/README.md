@@ -1,4 +1,3 @@
-Data Science : Mes projets
 # Projet 1 : Réduction de la durée moyenne des films
 ![](/Netflix_Data/images/netflix.jpg)
 Netflix ! Ce qui a commencé en 1997 comme un service de location de DVD a depuis explosé et est devenu la plus grande entreprise de divertissement/médias en termes de capitalisation boursière, avec plus de 200 millions d'abonnés en janvier 2021.
