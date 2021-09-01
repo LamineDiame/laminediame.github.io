@@ -4,7 +4,7 @@ Netflix ! Ce qui a commencé en 1997 comme un service de location de DVD a depui
 
 Étant donné le grand nombre de films et de séries disponibles sur la plateforme, c'est l'occasion idéale de nous plonger dans l'industrie du divertissement. Comment a pu évoluer l'industrie cinématographie depuis ses débuts ?
 
-## Importation du Dataset, création d'un DataFrame et visulisation des données
+## Import du Dataset, création d'un DataFrame et visulisation des données
 ![](/Netflix_Data/images/80048f50-3b37-4096-988c-b582e37ff07c.png)
 
 ## Création d'un scatter plot de la durées des films en fonction des années
