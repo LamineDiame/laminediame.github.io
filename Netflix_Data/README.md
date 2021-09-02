@@ -1,10 +1,13 @@
 # Projet 1 : Réduction de la durée moyenne des films
 ![](/Netflix_Data/images/netflix.jpg)
+
+
 Netflix ! Ce qui a commencé en 1997 comme un service de location de DVD a depuis explosé et est devenu la plus grande entreprise de divertissement/médias en termes de capitalisation boursière, avec plus de 200 millions d'abonnés en janvier 2021.
 
 Étant donné le grand nombre de films et de séries disponibles sur la plateforme, c'est l'occasion idéale de nous plonger dans l'industrie du divertissement. Comment a pu évoluer l'industrie cinématographie depuis ses débuts ?
 
 ## Import du Dataset, création d'un DataFrame et visulisation des données
+
 ```python
 # Create the years and durations lists
 years = [2011,2012,2013,2014,2015,2016,2017,2018,2019,2020]
@@ -17,6 +20,7 @@ movie_dict = {"years":years,"durations":durations}
 print(movie_dict)
 ```
 ![](/Netflix_Data/images/movie_dict.png)
+### Import de pandas et création d'un DataFrame à partir du dictionnaire "movie_dict"
 ```python
 # Import pandas under its usual alias
 import pandas as pd
@@ -27,6 +31,7 @@ durations_df = pd.DataFrame(movie_dict)
 # Print the DataFrame
 print(durations_df)
 ```
+### Import de matplotlib.pyplot et création d'un plot à partir des années et de la durée des films
 ![](/Netflix_Data/images/duration_df.png)
 ```python
 # Import matplotlib.pyplot under its usual alias and create a figure
@@ -46,7 +51,7 @@ plt.show()
 ![](/Netflix_Data/images/80048f50-3b37-4096-988c-b582e37ff07c.png)
 
 
-##Loading the rest of teh data from a CSV
+## Import du reste des data via CSV
 ```python
 # Read in the CSV as a DataFrame
 netflix_df = pd.read_csv("datasets/netflix_data.csv")
@@ -56,7 +61,7 @@ print(netflix_df[0:5])
 ```
 ![](/Netflix_Data/images/print_netflix_05.png)
 
-##Filtering for movies!
+## Filtrage des données en fonction de leur catégorie
 ```python
 # Subset the DataFrame for type "Movie"
 netflix_df_movies_only = netflix_df[netflix_df["type"]=="Movie"]
@@ -87,7 +92,7 @@ plt.show()
 ```
 ![](/Netflix_Data/images/2d9a3727-9580-4559-95cf-22a1f7bf1812.png)
 
-## Digging deeper
+## Filtrage des données en fonction de leur durée (Films de moins de 60 minutes)
 ```python
 # Filter for durations shorter than 60 minutes
 short_movies = netflix_movies_col_subset[netflix_movies_col_subset["duration"] < 60]
@@ -97,7 +102,7 @@ print(short_movies[0:20])
 ```
 ![](/Netflix_Data/images/print_short_movies.png)
 
-##Différencier les films
+## Attribution d'une couleur en fonction de la catégorie du film
 ```python
 # Define an empty list
 colors = []
@@ -118,7 +123,7 @@ colors[0:10]
 ```
 ![](/Netflix_Data/images/colors.png)
 
-## Ajout de couleurs afin de différencier les différents type de films en fonction de leur catégorie / Plotting with colors
+## Ajout de label aux différents axes ainsi que des couleurs
 ```python
 # Set the figure style and initalize a new figure
 plt.style.use('fivethirtyeight')
@@ -136,3 +141,8 @@ plt.ylabel("Duration(min)")
 plt.show
 ```
 ![](/Netflix_Data/images/a7e1cf64-559a-4337-922c-09890df9df25.png)
+
+## Conclusion
+
+Suite à l'exploration, au traitement ainsi que de l'analyse de ces données, nous pouvons conclure, qu'effetivement la durée moyenne des films a baissé au fur et à mesure des années. Cet tendance est du à l'augmentation de la production de film pour enfant ou encore de documentaires et de stand-up, qui sont de durée plus courte qu'un film classique.
+Nous avons donc pu confirmer cette tendance ainsi que sa cause.
