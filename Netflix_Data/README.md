@@ -4,7 +4,7 @@
 
 Netflix ! Ce qui a commencé en 1997 comme un service de location de DVD a depuis explosé et est devenu la plus grande entreprise de divertissement/médias en termes de capitalisation boursière, avec plus de 200 millions d'abonnés en janvier 2021.
 
-Étant donné le grand nombre de films et de séries disponibles sur la plateforme, c'est l'occasion idéale de nous plonger dans l'industrie du divertissement. Comment a pu évoluer l'industrie cinématographie depuis ses débuts ?
+Étant donné le grand nombre de films et de séries disponibles sur la plateforme, c'est l'occasion idéale de nous plonger dans l'industrie du divertissement. Comment a évolué la durée moyenne des films cinématographiques? ?
 
 ## Import du Dataset, création d'un DataFrame et visulisation des données
 
@@ -50,6 +50,8 @@ plt.show()
 
 ![](/Netflix_Data/images/80048f50-3b37-4096-988c-b582e37ff07c.png)
 
+Ici, nous pouvons voir que la durée des moyennes des films entre 2011 et 2020 est en forte baisse(102.5 minutes en moyenne pour 2011, et 90 minutes en moyenne pour 2020)
+
 
 ## Import du reste des data via CSV
 ```python
@@ -92,7 +94,9 @@ plt.show()
 ```
 ![](/Netflix_Data/images/2d9a3727-9580-4559-95cf-22a1f7bf1812.png)
 
-## Filtrage des données en fonction de leur durée (Films de moins de 60 minutes)
+Ici chaque points, représente un film unique. Nous pouvons donc observer plus en détail et de manière plus précise, l'évolution des films. Il y a eu une forte augmentation du nombre de films à partir des années 2000.
+
+## Filtrage des données en fonction de leur durée 
 ```python
 # Filter for durations shorter than 60 minutes
 short_movies = netflix_movies_col_subset[netflix_movies_col_subset["duration"] < 60]
@@ -101,6 +105,8 @@ short_movies = netflix_movies_col_subset[netflix_movies_col_subset["duration"] <
 print(short_movies[0:20])
 ```
 ![](/Netflix_Data/images/print_short_movies.png)
+
+Grâce au filtrage des films d'une durée de moins de 60 minutes, on peut s'apercevoir qu'une majorité de ces films se compose de films pour enfant, des documentaires et des stand-up
 
 ## Attribution d'une couleur en fonction de la catégorie du film
 ```python
@@ -123,6 +129,12 @@ colors[0:10]
 ```
 ![](/Netflix_Data/images/colors.png)
 
+Chaque film se voit attribuer une couleur en fonction de sa catégorie :
+- Rouge : les films pour enfants
+- Bleu : les documentaires
+- Vers : Les stand-up
+- Noire : Le reste des films
+
 ## Ajout de label aux différents axes ainsi que des couleurs
 ```python
 # Set the figure style and initalize a new figure
@@ -142,7 +154,8 @@ plt.show
 ```
 ![](/Netflix_Data/images/a7e1cf64-559a-4337-922c-09890df9df25.png)
 
+Chaque film possèdant maintenant une couleur en fonction de la catégorie à laquelle il appartient, on peut constater que la grand majorité des films ayant une courte durée sont les films pour enfants, les documentaires ainsi que les stand-up
 ## Conclusion
 
-Suite à l'exploration, au traitement ainsi que de l'analyse de ces données, nous pouvons conclure, qu'effetivement la durée moyenne des films a baissé au fur et à mesure des années. Cet tendance est du à l'augmentation de la production de film pour enfant ou encore de documentaires et de stand-up, qui sont de durée plus courte qu'un film classique.
+Suite à l'exploration, au traitement ainsi que de l'analyse de ces données, nous pouvons conclure, qu'effectivement la durée moyenne des films a baissé au fur et à mesure des années. Cette tendance est du à l'augmentation de la production de films pour enfant ou encore de documentaires et de stand-up, qui sont de durée plus courte qu'un film classique.
 Nous avons donc pu confirmer cette tendance ainsi que sa cause.
